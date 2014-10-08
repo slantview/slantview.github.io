@@ -4,7 +4,7 @@
   <title><![CDATA[slantview.com]]></title>
   <link href="http://slantview.com/atom.xml" rel="self"/>
   <link href="http://slantview.com/"/>
-  <updated>2014-10-08T16:12:59-07:00</updated>
+  <updated>2014-10-08T16:16:21-07:00</updated>
   <id>http://slantview.com/</id>
   <author>
     <name><![CDATA[Steve Rude]]></name>
@@ -18,7 +18,7 @@
     <link href="http://slantview.com/blog/2014/10/08/first-post/"/>
     <updated>2014-10-08T15:51:32-07:00</updated>
     <id>http://slantview.com/blog/2014/10/08/first-post</id>
-    <content type="html"><![CDATA[<p>Hello and welcome to my new Jekyll blog.</p>
+    <content type="html"><![CDATA[<p>Hello and welcome to my new Octopress blog.</p>
 
 <p>Test Code block:</p>
 
