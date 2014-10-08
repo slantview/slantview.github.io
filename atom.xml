@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Slantview]]></title>
+  <title><![CDATA[slantview.com]]></title>
   <link href="http://slantview.com/atom.xml" rel="self"/>
   <link href="http://slantview.com/"/>
-  <updated>2014-10-07T22:53:30-07:00</updated>
+  <updated>2014-10-08T15:53:44-07:00</updated>
   <id>http://slantview.com/</id>
   <author>
     <name><![CDATA[Steve Rude]]></name>
@@ -12,5 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First Post]]></title>
+    <link href="http://slantview.com/blog/2014/10/08/first-post/"/>
+    <updated>2014-10-08T15:51:32-07:00</updated>
+    <id>http://slantview.com/blog/2014/10/08/first-post</id>
+    <content type="html"><![CDATA[<p>Hello and welcome to my new Jekyll blog.</p>
+
+<p>Test Code block:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='Go'><span class='line'><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">Client</span><span class="p">)</span> <span class="nx">NewDropletRequest</span><span class="p">(</span><span class="nx">name</span> <span class="kt">string</span><span class="p">)</span> <span class="o">*</span><span class="nx">DropletRequest</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">dr</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">DropletRequest</span><span class="p">{</span>
+</span><span class='line'>        <span class="nx">Name</span><span class="p">:</span>              <span class="nx">name</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">Region</span><span class="p">:</span>            <span class="nx">DefaultRegionSlug</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">Size</span><span class="p">:</span>              <span class="nx">DefaultSizeSlug</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">Image</span><span class="p">:</span>             <span class="nx">DefaultImageSlug</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">Backups</span><span class="p">:</span>           <span class="kc">false</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">IPv6</span><span class="p">:</span>              <span class="kc">false</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">PrivateNetworking</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">UserData</span><span class="p">:</span>          <span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">dr</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="o">*</span><span class="nx">Client</span><span class="p">)</span> <span class="nx">CreateDroplet</span><span class="p">(</span><span class="nx">request</span> <span class="o">*</span><span class="nx">DropletRequest</span><span class="p">)</span> <span class="p">(</span><span class="o">*</span><span class="nx">Droplet</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">dropletResponse</span> <span class="nx">DropletResponse</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">apiErr</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">Post</span><span class="p">(</span><span class="s">&quot;droplets&quot;</span><span class="p">,</span> <span class="nx">request</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">dropletResponse</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nx">apiErr</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">nil</span><span class="p">,</span> <span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;API Error: %s&quot;</span><span class="p">,</span> <span class="nx">apiErr</span><span class="p">.</span><span class="nx">Message</span><span class="p">))</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">dropletResponse</span><span class="p">.</span><span class="nx">Droplet</span><span class="p">,</span> <span class="kc">nil</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
 </feed>

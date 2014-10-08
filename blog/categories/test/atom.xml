@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: test | slantview.com]]></title>
+  <link href="http://slantview.com/blog/categories/test/atom.xml" rel="self"/>
+  <link href="http://slantview.com/"/>
+  <updated>2014-10-08T15:53:44-07:00</updated>
+  <id>http://slantview.com/</id>
+  <author>
+    <name><![CDATA[Steve Rude]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First Post]]></title>
+    <link href="http://slantview.com/blog/2014/10/08/first-post/"/>
+    <updated>2014-10-08T15:51:32-07:00</updated>
+    <id>http://slantview.com/blog/2014/10/08/first-post</id>
+    <content type="html"><![CDATA[<p>Hello and welcome to my new Jekyll blog.</p>
+
+<p>Test Code block:</p>
+
+<pre><code class="Go">func (c *Client) NewDropletRequest(name string) *DropletRequest {
+    dr := &amp;DropletRequest{
+        Name:              name,
+        Region:            DefaultRegionSlug,
+        Size:              DefaultSizeSlug,
+        Image:             DefaultImageSlug,
+        Backups:           false,
+        IPv6:              false,
+        PrivateNetworking: false,
+        UserData:          "",
+    }
+
+    return dr
+}
+
+func (c *Client) CreateDroplet(request *DropletRequest) (*Droplet, error) {
+    var dropletResponse DropletResponse
+
+    apiErr := c.Post("droplets", request, &amp;dropletResponse, nil)
+    if apiErr != nil {
+        return nil, errors.New(fmt.Sprintf("API Error: %s", apiErr.Message))
+    }
+
+    return dropletResponse.Droplet, nil
+}
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
