@@ -6,7 +6,7 @@ comments: true
 categories: test tech
 ---
 
-Hello and welcome to my new Jekyll blog.
+Hello and welcome to my new Octopress blog.
 
 Test Code block:
 
